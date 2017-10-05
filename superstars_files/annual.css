@@ -1,0 +1,252 @@
+#annual {
+    font-family: Verdana, Arial Unicode MS;
+    font-size: 1.2em;
+    }
+#annual p {
+    font-family: Verdana, Arial Unicode MS;
+    font-size: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    }
+#annual p.companyname {
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+    }
+#annual p.office {
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    }
+#annual p.title {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    }
+#annual ul.text_list {
+    font-size: 1.2em;
+    }
+#annual ul.text_list li {
+    }
+#annual div.vermerk_ok {
+    border: 1px solid black;
+    padding: 0 10px;
+    }
+/*    
+#aktiva td,
+#passiva td,
+#guv td,
+#annual table.normal_annual_table th {
+    padding: 0ex 1ex ! important;
+    font-size: 1em;
+    text-align: center;
+    vertical-align: top;
+    }
+*/
+#aktiva,
+#passiva,
+#guv,
+#annual table.normal_annual_table {
+    padding-bottom: 25px;
+    }
+#aktiva td,
+#passiva td,
+#guv td,
+#annual table.normal_annual_table td {
+    /* width: 8em; */
+    text-align: right;
+    vertical-align: bottom;
+    padding: 0ex 1ex ! important;
+    font-size: 1em;
+    }
+#annual table.xtra_designed_table th {
+    vertical-align: bottom;
+    padding: 0ex 1ex ! important;
+    font-size: 1em;
+    line-height: 1.7em;
+    }
+#annual .leftalign,    
+#aktiva th.leftalign,
+#aktiva td.leftalign,
+#passiva th.leftalign,
+#passiva td.leftalign,
+#guv th.leftalign,
+#guv td.leftalign,
+#annual table.normal_annual_table th.leftalign,
+#annual table.normal_annual_table td.leftalign {
+    text-align: left;
+    }
+#annual .rightalign    
+#aktiva th.rightalign,
+#aktiva td.rightalign,
+#passiva th.rightalign,
+#passiva td.rightalign,
+#guv th.rightalign,
+#guv td.rightalign,
+#annual table.normal_annual_table th.rightalign,
+#annual table.normal_annual_table td.rightalign {
+    text-align: right;
+    }
+#aktiva td.headline_count,
+#passiva td.headline_count,
+#guv td.headline_count {
+    vertical-align: top;
+    font-weight: bold;
+    /* width: 1em; */
+    }
+#aktiva td.listsymbol,
+#passiva td.listsymbol,
+#guv td.listsymbol,
+#annual table.normal_annual_table th.listsymbol {
+    text-align: left;
+    vertical-align: top;
+    /* width: 1em; */
+    }
+#aktiva td.table_headline,
+#passiva td.table_headline,
+#guv td.table_headline {
+    font-weight: bold;
+    text-align: left;
+    /* width: 50em; */
+    }
+#aktiva tr.main_tablehead th,    
+#passiva tr.main_tablehead th,
+#guv tr.main_tablehead th,
+#annual table.normal_annual_table th {
+    text-align: center;
+    }
+    
+#annual table.normal_annual_table thead {
+    }
+    
+#annual div.signer_area {
+    text-align: center;
+    }
+#annual div.signer {
+    padding-top: 2em;
+    padding-bottom: 3em;
+    }
+#annual div.signer_datetown {
+    float: left;
+    width: 50%;
+    }
+#annual div.signer_company {
+    float: right;
+    text-align: left;
+    width: 50%;
+    }
+#annual div.signer_name {
+    text-align: center;
+    padding-bottom: 5em;
+    font-weight: bold;
+    }
+#annual hr.sign {
+    }
+#annual div.signer_autographs {
+    padding-bottom: 30px;
+    }
+#annual div.signer_autographs div.left,
+#annual div.signer_autographs div.middle,
+#annual div.signer_autographs div.right {
+    float: left;
+    }
+#annual div.signer_autographs div.left {
+    width: 33%;
+}
+#annual div.signer_autographs div.middle {
+    width: 34%;
+    text-align: center;
+    }
+#annual div.signer_autographs div.right {
+    width: 33%;
+    text-align: right;
+    }
+#annual div.notices {
+    width: 325px;
+    border-top: 1px solid black;
+    margin-top: -15px;
+    padding-bottom: 25px;
+    }
+#annual div.notices ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 0 10px;
+    }
+#annual div.notices ul li {
+    margin: 0;
+    font-size: 0.7em;
+    }
+
+#annual .leftline,
+#annual tr.leftline th,
+#annual tr.leftline td  {
+border-left-width: thin;  
+border-left-color: black;
+border-left-style: solid;
+    }
+#annual .underline,
+#annual tr.underline th,
+#annual tr.underline td  {
+border-bottom-width: thin;  
+border-bottom-color: black;
+border-bottom-style: solid;
+    }
+#annual .double_underline,
+#annual tr.double_underline th,
+#annual tr.double_underline td,
+#annual td.double_underline {
+border-bottom-width: thick;  
+border-bottom-color: black;
+border-bottom-style: double;
+    }
+#annual .bold_underline,
+#annual tr.bold_underline th, 
+#annual tr.bold_underline td {
+border-bottom-width: medium;    
+border-bottom-color: black;    
+border-bottom-style: solid;
+    }
+#annual .bold_double_underline,
+#annual tr.bold_double_underline th,
+#annual tr.bold_double_underline td {
+border-bottom-width: medium;    
+border-bottom-color: black;    
+border-bottom-style: double;
+    }
+#annual .bold2_underline {
+border-bottom-width: thick;    
+border-bottom-color: black;   
+border-bottom-style: solid;
+    }
+#annual h1, 
+#annual h2, 
+#annual h3, 
+#annual h4, 
+#annual h5 {
+/*  color: #00529c; */
+  font-family: Verdana; Arial Unicode MS;
+  color: black;
+  padding-top: 1.5em;
+  margin: 0px;
+  margin-bottom: 1ex;
+}
+/*
+#annual h1 { font-size: 1.6em; text-align: center; }
+#annual h2 { font-size: 1.4em; text-align: center; line-height: 1.6em; }
+#annual h3 { font-size: 1.3em; text-align: left; }
+#annual h4 { font-size: 1.2em; text-align: left; }
+#annual h5 { font-size: 1.1em; text-align: left; }
+*/
+#annual .odd { background-color: #ffffff; }
+#annual .even { background-color: #f0f0f0; }
+#annual .main_tablehead { background-color: #cdcdce; }
+#annual .main_group { background-color: #94b8c9; }
+#annual .group { background-color: #c9dce4; }
+#annual .sub_group { background-color: #dfeaef; }
+#annual .under_sub_group {  }
+#annual .sub_total { background-color: #e4d6d6; }
+#annual .end_total { background-color: #a7dddd; }
+#annual .second_line { background-color: #f0f0f0; }
+#annual .center { text-align: center ! important; }
+
+

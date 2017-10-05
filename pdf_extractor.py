@@ -1,4 +1,4 @@
-import pdfminer
+# import pdfminer
 
 import PyPDF2
 pdfFileObj = open('reliance.pdf','rb')     #'rb' for read binary mode

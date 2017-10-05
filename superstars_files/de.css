@@ -1,0 +1,71 @@
+/* language specific customizes (german) */
+/* UREG */
+.ureg ul.main_menu { width: 447px; }
+.ureg .main_menu li a.startpage {
+	background-image: url("../images/ureg/main_menu/de/startpage.gif");
+	width: 94px;
+	}
+.ureg .main_menu li a.search {
+	background-image: url("../images/ureg/main_menu/de/search.gif");
+	width: 69px;
+	}
+.ureg .main_menu li a.knowledgeable {
+	background-image: url("../images/ureg/main_menu/de/knowledgeable.gif");
+	width: 121px;
+	}
+.ureg .main_menu li a.doccart {
+	background-image: url("../images/ureg/main_menu/de/doccart.gif");
+	width: 160px;
+	}
+.ureg .login_nav li a.login {
+	background-image: url("../images/ureg/main_menu/de/login.gif");
+	width: 109px;
+	}
+.ureg .login_nav li a.logout {
+	background-image: url("../images/ureg/main_menu/de/logout.gif");
+	width: 109px;
+	}
+.ureg .login_nav li a.register {
+	background-image: url("../images/ureg/main_menu/de/register.gif");
+	width: 117px;
+	}
+.ureg .login_nav li a.mydata {
+	background-image: url("../images/ureg/main_menu/de/mydata.gif");
+	width: 117px;
+	}
+.ureg .main_menu a.doccart span.text_ext { margin-left: 130px; } /* 30px fewer that max size of link above (160px - 30px) */
+.ureg #header .middle .plattform_logo a img {
+  background-image: url(../images/ureg/logo-de.png);
+  width: 388px; height: 60px;
+}
+
+
+/* PP */
+.pp .main_menu li a.startpage { background-image: url(../images/pp/de/main_menu/startpage.gif); }
+.pp .main_menu li a.publish { background-image: url(../images/pp/de/main_menu/publish.gif); }
+.pp .main_menu li a.knowledgeable { background-image: url(../images/pp/de/main_menu/knowledgeable.gif); }
+.pp .main_menu li a.service { background-image: url(../images/pp/de/main_menu/service.gif); }
+.pp .login_nav li a.login { background-image: url(../images/pp/de/main_menu/login.gif); }
+.pp .login_nav li a.logout { background-image: url(../images/pp/de/main_menu/logout.gif); }
+.pp .login_nav li a.register { background-image: url(../images/pp/de/main_menu/register.gif); }
+.pp .login_nav li a.mydata { background-image: url(../images/pp/de/main_menu/mydata.gif); }
+
+
+/* EBANZ */
+.eb #header .middle .plattform_logo a img {
+  background-image: url(../images/eb/de/logo.png);
+  background-position: 0px 0px;
+  height: 66px;
+  width: 330px;
+  }
+.eb .main_menu li a.startpage { background-image: url(../images/eb/de/main_menu/startpage.gif); }
+.eb .main_menu li a.search { background-image: url(../images/eb/de/main_menu/search.gif); }
+.eb .main_menu li a.knowledgeable { background-image: url(../images/eb/de/main_menu/knowledgeable.gif); }
+.eb .main_menu li a.info_service { background-image: url(../images/eb/de/main_menu/push-service.gif); }
+.eb .main_menu li a.fondsdata { background-image: url(../images/eb/de/main_menu/fondsdata.gif); }
+.eb .login_nav li a.login { background-image: url(../images/eb/de/main_menu/login.gif); }
+.eb .login_nav li a.logout { background-image: url(../images/eb/de/main_menu/logout.gif); }
+.eb .login_nav li a.register { background-image: url(../images/eb/de/main_menu/register.gif); }
+.eb .login_nav li a.mydata { background-image: url(../images/eb/de/main_menu/mydata.gif); }
+
+

@@ -1,0 +1,47 @@
+/* Adjustment for Google Chrome */
+
+/* fix positionig of top meta nav */
+#header ul.meta_nav {
+  padding: 3px 18px 3px 10px;
+}
+
+
+/* browser compatibility update */
+/********************************/
+
+/* fixing position of external link icon in teaser */
+.content .teaser a.extern { background-position: left 4px; }
+
+/* fixing width of left column with inputfields on resultlist */
+.generic_resultlist_left div.block div.date_search { width: 192px; }
+
+
+/* funddata stuff */
+/******************/
+
+/* fixed table layout */
+table.layout tr.helper td { font-size: 0px; }	
+table.layout tr.helper td img { height: 0px; }
+table.layout tr.helper td img.left { width: 250px !important; min-width: 250px !important; }
+table.layout tr.helper td img.middle { width: 500px !important; min-width: 500px !important; }
+table.layout tr.helper td img.right { width: 250px !important; min-width: 250px !important; }
+
+.funddata_startpage_legend { width: 57em; } /* changed size of legend list */
+
+/* fixed resultlist tabs */
+.funddata_resultlist_tabs ul li { border-bottom: 3px solid #333 !important; bottom: -3px !important; }
+
+/* green box with help link in process-chooser on startpage */
+.eb .startpage .process_ebanz .pub .pubhelp_link p {
+    width: 30em;
+}
+/* fix size of questionmark in green box with help link in process-chooser on startpage */
+.eb .startpage .process_ebanz .pub .pubhelp_link p {
+    line-height: 2.2em;
+}
+
+/* fix link with green questionmark */
+.eb .startpage .process_ebanz .pub .pubhelp_link {
+  margin-top: 4.3em;
+  width: 30em;
+}

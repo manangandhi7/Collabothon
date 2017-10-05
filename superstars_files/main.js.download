@@ -1,0 +1,57 @@
+var t31_piwik = {
+		category: "Teaser Schnellzugriff",
+		action: "Klick - Teaser Schnellzugriff",
+		param1: "zum Amtlichen Teil",
+		param2: "zu den Fondspreisen",
+		param3: "zu den Netto-Leerverkaufspositionen",
+		param4: "zum Aktionärsforum"
+}
+var t32_piwik = {
+		category: "Teaser Verlag",
+		action: "Klick - Teaser Verlag",
+		param1: "Unternehmensregister",
+		param2: "Bundesgesetzblatt",
+		param3: "eBilanz-Online",
+		param4: "Bundesanzeiger-Fachmedien",
+		param5: "Datenservice",
+		param6: "Unternehmen und Wirtschaft",
+		param7: "Verlagshomepage",
+		param8: "European Business Register",
+                param9: "Legal Entity Identifier Register",
+                param10: "Transparenzregister"
+}
+
+function init_fonddata()
+{
+	var field = $( '#fonddata_search_param\\.stext' );
+	var str = search_field_placeholder;
+	field.focus( function()
+	{
+		var input = $( this );
+		if ( input.val() == str )
+		{
+			input.val( '' );
+		}
+	} );
+	/*
+	field.focusout( function()
+	{
+		var input = $( this );
+		if ( $.trim( input.val() ) == '' )
+		{
+			input.val( str );
+		}
+	} );
+	*/
+}
+
+function init_fonddata_resultlist()
+{
+	var fields = $( '.fonddata_resultlist_type_switch input.radio' );
+	var button = $( '.fonddata_resultlist_type_switch input.button' );
+	button.hide();
+	fields.change( function()
+	{
+		button.click();
+	} );
+}

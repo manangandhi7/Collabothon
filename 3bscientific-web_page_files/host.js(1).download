@@ -1,0 +1,22 @@
+(function(){if(window.jQuery===undefined){var b=document.createElement("script");b.setAttribute("type","text/javascript");
+b.setAttribute("src","//cdn.trustedsite.com/static/jquery/1.9.1/jquery.min.js");if(b.readyState){b.onreadystatechange=function(){if(this.readyState=="complete"||this.readyState=="loaded"){a()
+}}}else{b.onload=a}(document.getElementsByTagName("head")[0]||document.documentElement).appendChild(b)}else{jQuery=window.jQuery;
+trustedsite_load()}function a(){jQuery=window.jQuery.noConflict(true);trustedsite_load()}})();function trustedsite_disablewidget(a){if(window.jQuery===undefined){return 1
+}if(a&&document.getElementById(a)){return 1}if(parseInt(jQuery(window).width())<320){return 1}if(parseInt(jQuery(window).height())<500){return 1
+}if(navigator.userAgent.match(/; MSIE 6/i)||navigator.userAgent.match(/; MSIE 7/i)||navigator.userAgent.match(/; MSIE 8/i)||navigator.userAgent.match(/; MSIE 9/i)){return 1
+}return 0}function trustedsite_append(a){var b=document.createElement("div");b.innerHTML=a;document.body.appendChild(b.firstChild)
+}function trustedsite_ratesite(g){if(document.getElementById("trustedsite-review-modal")){return}if(document.getElementById("trustedsite-review-overlay")){return
+}if(!g){g="3bscientific.de"}var a="https://www.trustedsite.com/widget/1?utm_medium=button_float&host="+g;var d=500;var i=550;
+if(jQuery(window).width()<700||jQuery(window).height()<700){var c=(screen.width/2)-(d/2);var h=(screen.height/2)-(i/2);var b="TOOLBAR=0,TITLEBAR=0,STATUS=0,SCROLLBARS=0,RESIZABLE=0,MENUBAR=0,LOCATION=0,WIDTH="+d+",HEIGHT="+i+",TOP="+h+",LEFT="+c;
+window.open(a+"&context=popup","TSRATE",b);return}jQuery("<style type='text/css'>.trustedsite-body-noscroll{ overflow:hidden !important;}</style>").appendTo("head");
+jQuery("html,body").addClass("trustedsite-body-noscroll");var f=document.createElement("div");f.id="trustedsite-review-overlay";
+f.style.position="fixed";f.style.zIndex="999999998";f.style.left="0";f.style.top="0";f.style.bottom="0";f.style.right="0";
+f.style.width="100%";f.style.height="100%";f.style.background="rgba(0, 0, 0, .45)";f.onclick=function(){trustedsite_ratesite_close()
+};document.body.appendChild(f);var e=document.createElement("iframe");e.id="trustedsite-review-modal";e.style.position="fixed";
+e.style.zIndex="999999999";e.style.left=((jQuery(window).width()/2)-(d/2))+"px";e.style.top="100px";e.src=a+"&context=modal";
+e.style.padding="0px";e.style.borderRadius="10px";e.style.overflow="hidden";e.style.margin="0px";e.style.width=(d+0)+"px";
+e.style.height=(i+0)+"px";e.style.background="rgba(82, 82, 82, .7)";e.style.border="solid 10px rgba(82, 82, 82, .7)";document.body.appendChild(e)
+}function trustedsite_ratesite_close(){jQuery("html,body").removeClass("trustedsite-body-noscroll");jQuery("#trustedsite-review-overlay").remove();
+jQuery("#trustedsite-review-modal").remove()}window.addEventListener("message",function(a){if(!a||!a.data){return}if(a.data=="trustedsite_ratesite_close"){trustedsite_ratesite_close()
+}if(new String(a.data).indexOf("trustedsite_ratesite=")==0){trustedsite_ratesite(a.data.substring(21))}});function trustedsite_encode(a){return a?encodeURIComponent(a):""
+}function trustedsite_load(){};

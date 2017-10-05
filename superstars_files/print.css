@@ -1,0 +1,225 @@
+#header { display: none; }
+#sub_menu { display: none; }
+#breadcrumb { display: none; }
+#footer { display: none; }
+#td_content,
+#td_content_left,
+#td_content_right {
+    background: transparent;
+    color: black;
+}    
+body {
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    font: 11pt Garamond, Palatino, "Times New Roman", Times, serif;
+    color: black;
+    }
+html body div#container,
+html body table.layout {
+    background: none;
+    background-image: none;
+    width: auto;
+    }
+html body div#container h1, 
+html body div#container h2,
+html body div#container h3,
+html body div#container h4,
+html body div#container h5,
+html body div#container h6 {
+    background: transparent;
+    color: black;
+    font-family: "Lucida Grande", "Lucida Sans", "Lucida Sans Unicode", "Lucida", Verdana, "Bitstream Vera Sans", sans-serif;
+    font-weight: bold;
+    margin: 5mm 0 4mm 0;
+    page-break-after: auto; 
+}
+html body div#container h1 { font-size: 15pt; }    
+html body div#container h2 { font-size: 13pt; }    
+html body div#container h3 { font-size: 11pt; }    
+html body div#container h4,
+html body div#container h5,
+html body div#container h6 { font-size: 10pt; }    
+
+div.printversion div.tabs ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    }
+    
+div.printversion div.tabs div {
+    background: transparent;
+    color: black;
+    font-family: "Lucida Grande", "Lucida Sans", "Lucida Sans Unicode", "Lucida", Verdana, "Bitstream Vera Sans", sans-serif;
+    font-size: 13pt;
+    font-weight: bold;
+    margin: 5.5mm 0 4mm 0;
+    page-break-after: auto; 
+}    
+    
+html body div#container p {
+    margin: 0 0 4mm 0;
+    width: auto;
+    }
+html body div#container p+p {
+    /* margin-top: -5mm; */
+/*    text-indent: 2em;*/
+    }
+html body #container a,
+html body #container a:visited,
+html body #container a:hover,
+html body #container a:visited:hover {
+    background: transparent;
+    color: #04667e !important;
+    text-decoration: none;
+    }
+/* fomular design */    
+div.frame_form,
+div.frame_text {
+    color: black;
+    }
+div.frame_form div.tabs ul li,
+div.frame_text div.tabs ul li {
+    background: transparent;
+	display: none;
+    }
+div.frame_form div.tabs ul li.active,
+div.frame_text div.tabs ul li.active {
+    background: transparent;
+    }
+div.frame_form div.content,
+div.frame_text div.content {
+    background: transparent;
+    }
+
+/* overview pages */
+html body #container div.overview {
+    width: 19cm;
+    }
+html body #container div.overview div#create_draft_block { display: none; }    
+html body div.overview p {
+    width: auto;
+    }
+html body div.overview div.block div.view_elem {
+    margin: 0 0 5mm 0;
+    }
+html body div.overview div.block div.view_elem div.view_label {
+    float: left;
+    margin-right: 5mm;
+    width: 6cm;
+    }
+html body div.overview div.block div.view_elem div.view_label p,
+html body div.overview div.block div.view_elem div.view_value p {
+    margin-bottom: 0 !important;
+    }
+html body div.overview div.block div.view_elem div.view_value {
+    float: left;
+    width: 10cm;
+    }
+html body div.overview div.overview_list_table table {
+    margin-bottom: 4mm;
+    }
+html body div.overview table.view_addresses {
+    }
+html body div.overview div.overview_list_table table,
+html body div.overview table.view_addresses {
+    width: 17cm;
+    }
+html body div.overview div.overview_list_table table th,
+html body div.overview table.view_addresses th {
+    }
+html body div.overview div.overview_list_table table td,
+html body div.overview table.view_addresses td {
+    }
+html body div.overview div.overview_list_table table th,
+html body div.overview div.overview_list_table table td,
+html body div.overview table.view_addresses th,
+html body div.overview table.view_addresses td {
+    text-align: left;
+    padding-right: 5mm;
+    }
+    
+/* special for comma-aligned numbers */
+div.block div.view_elem div.view_value p.right_aligned_num { 
+    float: left; 
+    text-align: right;
+    width: 8em ! important;
+    padding-right: 0;
+    }
+div.block div.view_elem div.view_value p.left_aligned_rest { 
+    display: inline;
+    }
+/* overview pages */
+
+/* button bar */    
+div.frame_form div.form_button_bar,
+div.frame_text div.form_button_bar {
+    display: none;
+    }
+/* button bar */    
+/* formular design */  
+
+
+/* publication */
+/* to not cut pages */
+div.publicationcontent { padding: 0px; }
+
+/* fix for too wide publication text in list tables */
+div.publicationcontent table.list_table_na, 
+div.publicationcontent table.list_table_bl,
+div.publicationcontent table.list_table_ol, 
+div.publicationcontent table.list_table_ol_kapmug, 
+div.publicationcontent table.list_table_ul { width: auto; }
+div.publicationcontent .list_ident,
+div.publicationcontent .list_content { width: auto; } 
+
+
+/* bugfix: don't display index on printversion */
+div.pub_top_left { float: none; }
+div.pub_index { display: none; }
+div#greybar { float: none; }
+.content span.place_of_finding_certificate { font-weight: bold; padding-left: 2em; }
+
+/* publication header */
+.publication_info { 
+	font-family: verdana, arial, helvetica, sans-serif; 
+	font-size: 10pt;
+	margin-bottom: 5pt;
+	}
+.publication_info table th { font-weight: bold; }
+.publication_info table td { 
+	font-weight: normal; 
+	vertical-align: top;
+	}
+.publication_info table th, 
+.publication_info table td { 
+  padding: 0 10pt; 
+  text-align: left;
+  }
+.publication_info table th.first,  
+.publication_info table td.first { padding: 0 10pt 0 0; }
+.publication_info table th.relevance,
+.publication_info table td.relevance { padding: 0 0 0 10pt; }
+.publication_info table td.relevance div.relevance_graphic { display: none; }
+.publication_info .print_link { display: none; }  
+.content .publication_navigation { display: none; }
+
+
+/* don't diplay list-markers on news and don't indent them */
+div.startpage div.messages ul.news { margin-left: 0; padding-left: 0; }
+div.startpage div.messages ul.news li.news { list-style-type: none; }
+div.entrypage div.news ul.news { margin-left: 0; padding-left: 0; }
+div.entrypage div.news ul.news li.news { list-style-type: none; }
+div.entrypage div.item div.news ul.intern { margin-left: 0; padding-left: 0; }
+div.entrypage div.item div.news ul.intern li { list-style-type: none; } 
+div.entrypage div.item div.news ul.intern li li { list-style-type: disc; } 
+
+
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+html .clearfix { height: 1%; } 
+div.forcemargin { 
+	height: 1pt; 
+	line-height: 1pt;
+	margin: 0px;
+	padding: 0px;
+	}   

@@ -1,0 +1,259 @@
+$(document).ready(function() 
+{
+	// get # anchor value
+	var AnchorValue = location.hash.replace("#","");
+
+	MenuNavigation();
+	MobileMenuNavigation();
+	changeTabContent();
+	$(".flyoutContainer").hide();
+	$(".flyoutItem").bind("mouseleave", function() {
+		$(".flyoutContainer").hide();
+	});
+	$("#ShopFlyoutItem").bind("mouseenter", function() {
+		ManageMenuFlyout('ShopFlyout');
+	});
+	$(".linkWishlist").on("click", function(){
+		$.post( 
+			$(this).prop("href"),
+			{IsFormDataPosted: 1}
+		).done(function( data ) {
+			if (data.SUCCESSFUL) {
+				$("#linkWishlist" + data.PRODUCTID).html(data.LINKTEXT);
+				if (data.WISHLISTITEMCOUNT == 0) {
+					$('.WishlistItemCount').html('');
+				} else {
+					$('.WishlistItemCount').html(' ( ' + data.WISHLISTITEMCOUNT + ' )');
+				}
+			} else if (data.ERRORTYPE == "NoUser") {
+				loginDialog();
+			}
+		});
+		return false;// prevent relocation
+	});
+	if(navigator.appVersion.indexOf("MSIE 8.") != -1) {
+		$("#OldBrowserWarningContainer").show();
+	}
+	$("#btnHideCookiePolicyInformation").on("click", function() {
+		setCookiePolicyCookie();
+	});
+	
+	// only if there are tabs and anchor value available try to select a tab
+	if (AnchorValue !== "" && !isNaN(AnchorValue)) {
+		if ($(".tabContent").length > 0) {
+			changeTabContent(AnchorValue);	
+		} else if ($("#contentTabs").length > 0) {
+			$("#contentTabs #tab_" + AnchorValue).tab('show');
+		}
+	}
+		
+	$(".textMax3Lines").ellipsis({
+		row: 3
+	});
+	
+	$(".submitOnChange").on("change", function(e){
+		$(e.currentTarget).closest("form").submit();
+	});
+
+	// custom country selector gets the focus prior to the search field,
+	// so only if the CustomCountrySelection element is not on the page
+	// set the focus on the search text field
+	if ($('#CustomCountrySelection').length == 0) {
+		$('#SearchText').focus();
+	}
+	
+	
+});
+function changeTabContent(ContainerID) 
+{
+	if(!ContainerID)
+	{
+		$(".tabContent").hide();
+		$("#tab_1").addClass('active');
+		$("#tabContent_1").show();
+	}
+	else
+	{
+		$(".tabs").removeClass('active');
+		$(".tabContent").hide();
+		$("#tab_"+ContainerID).addClass('active');
+		$("#tabContent_"+ContainerID).show();
+		// set the hash value so this can be used as link to open directly this tab
+		window.location.hash = ContainerID;
+	}	
+}
+function ManageMenuFlyout(FlyoutID, contentURL)
+{
+	var contentURL = contentURL || "";
+	$(".flyoutContainer").hide();
+	$("#"+FlyoutID+"Container").toggle();
+	// load container content
+	if(contentURL.length && !$("#"+FlyoutID+"Container").html().length) 
+	{
+		$("#"+FlyoutID+"Container").html('<img src="/_images/loading.gif" />');
+		$.get(contentURL, function( data ) 
+		{
+			$("#"+FlyoutID+"Container").html( data );
+		});
+	}
+}
+function MenuNavigation(MenuID)
+{
+	if(!MenuID)
+	{
+		$("#ShopMenuContainer .FirstLevelNav li").first().addClass("active arrow_box_right");
+		$("#ShopMenuContainer .SecondLevelNav").hide();
+		$("#ShopMenuContainer #SecondLevelNav_1").show();		 
+	}
+	else
+	{
+		$("#ShopMenuContainer .FirstLevelNav li").removeClass("active arrow_box_right");
+		$("#ShopMenuContainer .FirstLevelNav li.level1_"+MenuID).addClass("active arrow_box_right");
+		$("#ShopMenuContainer .SecondLevelNav").hide();
+		$("#ShopMenuContainer #SecondLevelNav_"+MenuID).show();
+		checkMenuHeight(MenuID);
+	}
+}
+function MobileMenuNavigation(MenuID)
+{
+	if(!MenuID)
+	{
+		$("#ShopMobileMenuContainer .SecondLevelNav").hide();	 
+	}
+	else
+	{
+		$("#ShopMobileMenuContainer .FirstLevelNav li.level1_"+MenuID).toggleClass("active");
+		$("#ShopMobileMenuContainer #MobileSecondLevelNav_"+MenuID).toggle();
+	}
+}
+function MobileNavigation(NavigationContainer)
+{
+	if(NavigationContainer == 'TopMenu')
+	{
+		$('#TopMenu').toggle();
+		$('#SearchContainer').hide();
+	}
+	else if(NavigationContainer == 'SearchContainer')
+	{
+		$('#SearchContainer').toggle();
+		$('#TopMenu').hide();
+	}
+}
+function checkMenuHeight(MenuID)
+{
+	if(MenuID)
+	{
+		if($("#ShopMenuContainer #SecondLevelNav_"+MenuID).height() < $('#ShopMenuContainer .FirstLevelNav').height())
+		{
+			$("#ShopMenuContainer #SecondLevelNav_"+MenuID).height($('#ShopMenuContainer .FirstLevelNav').height());
+		}
+	}
+}
+function checkProductDetailHeight()
+{
+	if($("#ProductInformationContainer").height() < $('#ProductImageContainer').height())
+	{
+		$("#ProductInformationContainer").height($('#ProductImageContainer').height());
+	}
+}
+function openMediaWindow(name) {
+	theURL = '/3d/'+name+'/index.cfm';
+	winName = name;
+	features ='toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=0,screenX=0,screenY=0,top=0,left=0,resizable=0,width=750,height=595';
+	window.open(theURL,winName,features);
+}
+
+function submitSLISearch(form) {
+	var search = encodeURIComponent(form.w.value);
+	var asug = encodeURIComponent(form.asug.value);
+
+	window.location = form.action + "##w=" + search + "&asug=" + asug;
+	return false;
+}
+
+function setCookiePolicyCookie(){
+	var cookieExpires = new Date();
+	cookieExpires.setTime(cookieExpires.getTime() + 1000*60*60*24*365);
+	cookieExpires.toGMTString();
+	document.cookie = "CookiePolicyAccepted=true;expires=" + cookieExpires + ";path=/";
+	$('#CookiePolicyInformationContainer').hide();
+}
+
+function isNumber(n) {
+	return !isNaN(parseFloat(n)) && isFinite(n);
+}
+
+/**
+ * checks if a specific array element contains a string and if then splices and returns it
+ * 
+ * @param e array containing the elements
+ * @param s string which has to be in the element
+ * @param i	index where the element is to be found
+ * @returns element|null
+ */
+function spliceElementWithStringNoCase(e,s,i) {
+	// if this element contains search string, then cut and return it --->
+	return e[i].toLowerCase().indexOf(s.toLowerCase())>-1?e.splice(i,1) : null;
+}
+
+/**
+ * iterates through an array and if finds an element containing the given string, splices the array and returns that element
+ * 
+ * @param e 	array containing the elements
+ * @param s 	string which has to be in the element
+ * @param i		index where the element is to be found
+ * @returns element|null
+ */
+function spliceWithStringNoCase(e,s,i) {
+	return /* index is optional */ i = i || 0, spliceElementWithStringNoCase(e,s,i) || /* go on if there are more elements to iterate through */(i<(e.length - 1) ? spliceWithStringNoCase(e,s,i+1):null);
+}
+
+
+/* BootstrapDialog */
+function BootstrapDialogSimpleMessage(message) {
+	BootstrapDialog.show({
+		message: message,
+		type: BootstrapDialog.TYPE_DEFAULT,
+		onshow: function(dialog) {
+			dialog.getModalHeader().hide();
+			dialog.getModalFooter().hide();
+		}
+	});
+}
+function BootstrapDialogMessage(title, message) {
+	BootstrapDialog.show({
+		title: title,
+		message: message,
+		type: BootstrapDialog.TYPE_DEFAULT,
+		onshow: function(dialog) {
+			dialog.getModalFooter().hide();
+		}
+	});
+}
+function BootstrapDialogAlert(title, message, btnText) {
+	BootstrapDialog.alert({
+		title: title,
+		message: message,
+		type: BootstrapDialog.TYPE_DEFAULT,
+		buttons: [{
+			label: btnText || 'Close',
+			action: function(dialogItself){
+				dialogItself.close();
+			}
+		}]
+	});
+}
+function BootstrapDialogConfirm(options) {
+	var config = {
+		title: 'Confirmation',
+		message: '',
+		type: BootstrapDialog.TYPE_DEFAULT,
+		btnOKLabel: 'Confirm',
+		btnCancelLabel: 'Cancel',
+		btnOKClass: 'btn-warning'
+	};
+	$.each(options, function(key, value){
+		config[key] = value;
+	});
+	BootstrapDialog.confirm(config);
+}

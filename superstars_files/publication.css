@@ -1,0 +1,467 @@
+/* Publication overview Page */
+
+div.publicationcontent {
+  clear: both;
+  padding: 15px 5px;
+  border-top: 1px solid #9c9c9d;
+  border-bottom: 1px solid #9c9c9d;
+  /* Ab hier beginnt die Definition der Styles fuer den Banz */
+   font-size: 1em; 
+   font-weight: normal;
+   font-family: verdana, arial, helvetica, sans-serif;
+   line-height: 1.3em; 
+}
+div.publicationcontent table { 
+    font-size: 1em;
+    font-weight: normal;
+    font-family: verdana, arial, helvetica, sans-serif;
+    }
+div.publicationcontent img { 
+    border: medium none; 
+    }
+
+/* .1212 { font-size:11px; } */
+
+/* /\* publication content *\/ */
+/* h1, h2, h3, h4, h5, h6 { */
+/*   margin: 0px; */
+/*   margin-bottom: 1ex; */
+/* } */
+
+div.publicationcontent h1,
+div.publicationcontent h2,
+div.publicationcontent h3,
+div.publicationcontent h4,
+div.publicationcontent h5,
+div.publicationcontent h6 {
+  font-family: Verdana, "Arial Unicode MS";
+  color: black;
+  padding: 0ex;
+  margin: 1.5em 0 1ex 0;
+  line-height: 1.2em;
+}
+
+div.publicationcontent h1 { font-size: 16pt; }
+div.publicationcontent h2 { font-size: 14pt; }
+div.publicationcontent h3 { font-size: 12pt; text-align: center; }
+div.publicationcontent h3.logo_text { margin-top: 1ex; }
+div.publicationcontent h4 { font-size: 10pt; }
+div.publicationcontent h5 { font-size: 8pt; }
+
+div.publicationcontent h3.z_titel {
+  /* font-size: 12pt; */
+  font-weight: bold;
+  margin-top: 3.6ex; /* 25px */
+  margin-bottom: 0.8ex;   /* 5px */
+  line-height: 1.3em;
+  text-align: center;
+}
+
+div.publicationcontent h4.z_titel {
+  /* font-size: 10pt; */
+  font-weight: bold;
+  margin-top: 3.4ex; /* 20px */
+  margin-bottom: 0.9ex;   /* 5px */
+  text-align: center;
+}
+
+div.publicationcontent h5.z_titel {
+  /* font-size: 8pt; */
+  font-weight: normal;
+  margin-top: 3ex; /* 15px */
+  margin-bottom: 1ex;   /* 5px */
+  line-height: 1.1em;
+  text-align: center;
+}
+
+div.publicationcontent h3.l_titel {
+  /* font-size: 12pt; */
+  font-weight: bold;
+  margin-top: 4.3ex; /* 30px */
+  margin-bottom: 0.8ex; /* 5px */
+}
+
+div.publicationcontent h3.b_teil {
+  font-size: 11pt;
+  font-weight: bold;
+  margin-top: 5.8ex; /* 40px */
+  margin-bottom: 0.8ex; /* 5px */
+}
+
+div.publicationcontent div { /* new from 2004-06-15 */
+  font-family: Verdana, "Arial Unicode MS";
+  font-size: 10pt;
+}
+
+div.publicationcontent P {
+  font-family: Verdana, "Arial Unicode MS";
+  font-size: 10pt;
+  /*         margin-top: 10px; */
+  /*         margin-bottom: 10px; */
+  margin: 1ex 0;
+  line-height: 1.3em; /* from main.css */
+}
+
+div.publicationcontent P.list_p_f,
+div.publicationcontent P.list_p_fl,
+div.publicationcontent table.std_table P.tbl_p_f,
+div.publicationcontent table.std_table P.tbl_p_fl {
+  margin-top: 0pt;
+}
+
+div.publicationcontent P.list_p_l,
+div.publicationcontent P.list_p_fl,
+div.publicationcontent table.std_table P.tbl_p_l,
+div.publicationcontent table.std_table P.tbl_p_fl {
+  margin-bottom: 0pt;
+}
+
+div.publicationcontent td {
+  font-family: Verdana, "Arial Unicode MS";
+  font-size: 10pt;
+  line-height: 1.3em;
+}
+
+div.publicationcontent table.std_table tbody,
+div.publicationcontent table.std_table tfoot { vertical-align: top; }
+div.publicationcontent table.std_table thead { vertical-align: bottom; }
+
+div.publicationcontent table.std_table thead tr td,
+div.publicationcontent table.std_table thead tr th { font-weight: normal; }
+
+div.publicationcontent table.std_table tr td {
+  padding-left: 1ex;
+  padding-right: 1ex;
+}
+div.publicationcontent table.std_table { text-align: right; }
+
+div.publicationcontent table.std_table tr.like_thead { vertical-align: bottom; }
+
+div.publicationcontent LI {
+  font-family: Verdana, "Arial Unicode MS";
+  font-size: 10pt;
+}
+
+div.publicationcontent TABLE.showborder { /* new from 2004-06-15 */
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+div.publicationcontent TABLE.showborder TD { /* new from 2004-06-15 */
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+div.publicationcontent a.pos_a_name {
+  font-family: Verdana, "Arial Unicode MS";
+  font-size: 9pt;
+  font-weight: normal;
+  color: black;
+}
+
+div.publicationcontent table td.list_ident,
+div.publicationcontent table td.list_bl_ident,
+div.publicationcontent table td.list_top_ident {
+  vertical-align: top;
+  text-align: right;
+  width: 3%;
+}
+
+div.publicationcontent table td.list_content,
+div.publicationcontent table td.list_bl_content,
+div.publicationcontent table td.list_top_content {
+  vertical-align: top;
+  padding-left: 2em;
+  width: 97%;
+}
+
+div.publicationcontent table td.list_bl_ident { width: 10%; }
+div.publicationcontent table td.list_bl_content { width: 90%; }
+
+div.publicationcontent table td.list_top_ident { width: 6%; }
+div.publicationcontent table td.list_top_content { width: 94%; }
+
+/* publicationfix for all list_tables because IE have probs with paddings */
+/* and width of 100% */
+div.publicationcontent table.list_table_na,
+div.publicationcontent table.list_table_bl,
+div.publicationcontent table.list_table_ol,
+div.publicationcontent table.list_table_ol_kapmug,
+div.publicationcontent table.list_table_ul { width: 100%; }
+
+div.publicationcontent table.list_table_na tr td,
+div.publicationcontent table.list_table_bl tr td,
+div.publicationcontent table.list_table_ol tr td,
+div.publicationcontent table.list_table_ol_kapmug tr td,
+div.publicationcontent table.list_table_ul tr td {
+  padding-top: 1.3ex;
+  padding-bottom: 0.7ex;
+}
+
+
+
+/* annual */
+#annual {
+  line-height: 2.5ex;
+  font-family: Verdana, "Arial Unicode MS";
+}
+
+#annual div.centerimage { text-align: center; }
+#annual a.anker { font-weight: normal; }
+
+#annual dd {
+  margin: 1ex 2.5ex 2.5ex 2.5ex;
+  line-height: 2.5ex;
+  font-size: 1.5ex;
+}
+
+#annual li {
+  margin: 1ex 2.5ex 2.5ex 0ex;
+  line-height: 2.5ex;
+  font-size: 1.5ex;
+}
+
+#annual p { text-align: left; font-size: 1.5ex; }
+#annual p.notice { font-size: 1.3ex; }
+
+#annual p.companyname {
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+#annual p.office {
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+#annual p.title {
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+#annual p.pictureheadline {
+  text-align: left;
+  font-weight: bold;
+}
+
+#annual p.signature {
+  text-align: center;
+  font-style: italic;
+}
+
+p.centertext { text-align: center ! important; }
+#annual table {
+  width: 100%;
+  font-family: Verdana, "Arial Unicode MS";
+  font-size: 1.5ex;
+  color: black;
+  border-spacing: 0px;
+}
+
+#annual caption {
+  text-align: left;
+  font-weight: bold;
+}
+
+#annual th.caption {
+  text-align: left;
+  font-weight: bold;
+  padding: 0ex 0ex ! important;
+}
+
+#annual tr.bold_datafields td {
+  font-weight: bold;
+}
+
+#annual th {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: bottom;
+  padding: 0ex 1ex ! important;
+}
+
+#annual th.rightalign {
+  text-align: right;
+}
+
+#annual td {
+  text-align: right;
+  vertical-align: bottom;
+  padding: 0ex 1ex ! important;
+  font-size: 2ex;
+}
+
+#aktiva_passiva {
+  width: 100%;
+  font-size: 1.5ex;
+  color: black;
+  border-spacing: 0px ! important;
+}
+
+#aktiva_passiva td {
+  width: 50%;
+}
+
+#aktiva_passiva table {
+  width: 95%;
+  font-size: 2ex;
+  border-spacing: 0px;
+}
+
+#aktiva_passiva td,
+#aktiva_passiva th,
+#aktiva_passiva caption {
+  vertical-align: top;
+}
+
+#aktiva th, aktiva td, aktiva caption { }
+#passiva th, passiva td, passiva caption { }
+
+.commentary {
+  font-size: 1.5ex;
+  position: relative;
+  top: -1.2ex;
+}
+
+.underline, tr.underline th, tr.underline td  {
+  border-bottom-width: thin;
+  border-bottom-color: black;
+  border-bottom-style: solid;
+}
+
+.double_underline, tr.double_underline th, tr.double_underline td {
+  border-bottom-width: thin;
+  border-bottom-color: black;
+  border-bottom-style: double;
+}
+
+.bold_underline, tr.bold_underline th, tr.bold_underline td {
+  border-bottom-width: medium;
+  border-bottom-color: black;
+  border-bottom-style: solid;
+}
+
+.bold_double_underline, tr.bold_double_underline th, tr.bold_double_underline td {
+  border-bottom-width: medium;
+  border-bottom-color: black;
+  border-bottom-style: double;
+}
+
+.bold2_underline {
+  border-bottom-width: thick;
+  border-bottom-color: black;
+  border-bottom-style: solid;
+}
+
+table.text_table td { text-align: left; }
+#indexlist { font-size: 2.0ex; }
+#indexlist ul li { font-size: 2.0ex; }
+#indexlist ul li ul li { font-size: 2.0ex; }
+
+#annual h1, #annual h2, #annual h3, #annual h4, #annual h5, #annual h6 {
+  /*  color: #00529c; */
+  font-family: Verdana, "Arial Unicode MS";
+  color: black;
+  padding-top: 1.5em;
+  margin: 0px;
+  margin-bottom: 1ex;
+}
+
+#annual h1 { font-size: 12pt; text-align: center; }
+#annual h2 { font-size: 11pt; text-align: center; }
+#annual h3 { font-size: 11pt; text-align: left; }
+#annual h4 { font-size: 10pt; text-align: left; }
+#annual h5 { font-size: 8pt; text-align: left; }
+#annual h6 { font-size: 7pt; text-align: left; }
+
+.main_tablehead { background-color: #cdcdce; }
+.main_group { background-color: #94b8c9; }
+.group { background-color: #c9dce4; }
+.sub_group { background-color: #dfeaef; }
+.under_sub_group {  }
+.sub_total { background-color: #e4d6d6; }
+.end_total { background-color: #a7dddd; }
+.second_line { background-color: #f0f0f0; }
+.center { text-align: center ! important; }
+
+div.pub_disclaimer { margin-right: 15px; }
+div.pub_disclaimer input.button { margin-left: 10px; }
+div.pub_disclaimer input { margin-bottom: 3px; }
+
+
+div.publicationcontent td.tbl_default {
+  padding-left: 5px; 
+  padding-right: 5px; 
+  text-align: left;
+}
+
+/* publications with index */
+#at_index h3 {
+  text-align: left;
+  font-size: 1em;
+}
+#at_index table {}
+#at_index table tr {}
+#at_index table td { 
+    font-size: 0.85em;
+    padding: 1ex;
+    vertical-align: top; 
+    }
+#at_index table td li {
+  font-size: 1em;
+  }
+#at_index ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#at_index ul li {
+  margin: 0 0 1ex 0;
+  padding: 0;
+}
+#at_index a {
+  color: #ff4b00;
+  font-size: 1em;
+  text-decoration: none;
+}
+#at_index a.doc {
+        background: url(../../images/doc_link_icon.gif) no-repeat left 2px;
+	padding-left: 2ex;
+}
+#at_index a:hover,
+#at_index a:focus,
+#at_index a:active {
+  text-decoration: underline;
+}
+#at_index a .bullet { padding: 0 3px 0 0; } 
+
+
+/* new correction info in xml */
+.publicationcontent table.correction_advice {
+  width: 100%;
+}
+.publicationcontent table.correction_advice tr {
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+}
+.publicationcontent table.correction_advice tr td {
+  background-color: #E5EDEF;
+  border-top: 1px solid #FFFFFF;
+  padding: 10px;
+  vertical-align: top;
+}
+.publicationcontent table.correction_advice tr td p {
+  color: #204D4F;
+  font-size: 0.8em;
+  margin: 1ex 0;
+}
+.publicationcontent table.correction_advice tr td p.first {
+  margin-top: 0;
+}
+.publicationcontent table.correction_advice tr td p.last {
+  margin-bottom: 0;
+}
