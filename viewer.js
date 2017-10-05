@@ -4,7 +4,6 @@ $(document).ready(function() {
         $countryMatch = $(countryMatch);
         console.log('Got country match:', $countryMatch.data('country-iso'), $countryMatch.data('country-name'), $countryMatch.data('found-text'));
     });
-    goToIndex(0);
 //    $($('.country-match')[0]).addClass('active');
     $('body').append('<div class="top overlay"></div>')
     $('body').append('<div class="left overlay"></div>')
@@ -24,6 +23,7 @@ $(document).ready(function() {
     });
     var info_html = '<strong>Foreign matches:</strong><div>' +  foreign_matches_html + '</div><br/><strong>Country matches</strong><div>' + country_matches_html + '</div>'
     $('#info').html(info_html)
+    goToIndex(0);
 
     function getCurrentIndex() {
         var $countryMatches = $('.country-match');
