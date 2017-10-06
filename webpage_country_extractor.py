@@ -17,6 +17,7 @@ def get_country_dict(countries):
         country_dict[country['cca3']] = country_names
     return country_dict
 
+
 def write_output_file(target_file_name):
     with open('countries.json', encoding='utf8') as f:
         countries = json.load(f)
@@ -32,8 +33,8 @@ def write_output_file(target_file_name):
 
     # Inject custom script
     text = text.replace('</head>', '<script src="viewer.js"></script>'
-                                                  '<link rel="stylesheet" type="text/css" href="viewer.css"></link>'
-                                                  '</head>', 1)
+                                   '<link rel="stylesheet" type="text/css" href="viewer.css"></link>'
+                                   '</head>', 1)
 
     # soup = BeautifulSoup(html, 'html.parser')
     # text = soup.getText()
@@ -69,7 +70,8 @@ def write_output_file(target_file_name):
         name = english_country_names[match['country_iso']]
         text = ''.join([
             text[:match['match'].start()],
-            '<span class="country-match" data-match="{}" data-country-name="{}" data-country-iso="{}" data-found-text="{}">{}</span>'.format(name, name, match['country_iso'], found_text, found_text),
+            '<span class="country-match" data-match="{}" data-country-name="{}" data-country-iso="{}" data-found-text="{}">{}</span>'.format(
+                name, name, match['country_iso'], found_text, found_text),
             text[match['match'].end():]
         ])
 
@@ -94,7 +96,6 @@ def write_output_file(target_file_name):
 
     matches.sort(key=lambda match: match.start(), reverse=True)
 
-
     for match in matches:
         found_text = match.group()
         text = ''.join([
@@ -106,7 +107,8 @@ def write_output_file(target_file_name):
 
     text = text.replace('<body', '<body data-matches="{}"'.format(html.escape(json.dumps({
         'foreign': {match.group(): foreign_counter[match.group()] for match in foreign_matches},
-        'country': {english_country_names[match['country_iso']]: country_counter[match['country_iso']] for match in country_matches}
+        'country': {english_country_names[match['country_iso']]: country_counter[match['country_iso']] for match in
+                    country_matches}
     })).replace('"', '\\"')))
 
     out_file_name = 'out_{}'.format(target_file_name)

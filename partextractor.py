@@ -27,8 +27,8 @@ def get_parts(file_name):
         classes = sibling.get('class')
         if not classes:
             classes = []
-        # if 'b_teil' in classes:
-        #     print(sibling.get('id'))
+            # if 'b_teil' in classes:
+            #     print(sibling.get('id'))
     # for part, texts in text_by_part.items():
     #     print(part, texts)
     return text_by_part
