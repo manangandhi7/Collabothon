@@ -33,7 +33,8 @@ def write_output_file(target_file_name):
 
     # Inject custom script
     text = text.replace('</head>', '<script src="viewer.js"></script>'
-                                   '<link rel="stylesheet" type="text/css" href="viewer.css"></link>'
+                                   '<link rel="stylesheet" type="text/css" href="viewer.css">'
+                                   '<link rel="stylesheet" type="text/css" href="viewer.css">'
                                    '</head>', 1)
 
     # soup = BeautifulSoup(html, 'html.parser')
